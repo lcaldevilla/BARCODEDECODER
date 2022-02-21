@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "6mrVDKFfNanRqyvfxrr00n4w43vLmHULBMb1CrQtB/XO/IIemeA7FMgD7fzhceTfe8RcP4DvC8ylnAJy++PXHg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\WAREHOUSEREADER.iOS\\WAREHOUSEREADER.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Luis\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Luis\\.nuget\\packages\\xamarin.essentials\\1.7.1\\xamarin.essentials.1.7.1.nupkg.sha512",
+    "C:\\Users\\Luis\\.nuget\\packages\\xamarin.forms\\5.0.0.2337\\xamarin.forms.5.0.0.2337.nupkg.sha512",
+    "C:\\Users\\Luis\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
+    "C:\\Users\\Luis\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
+  ],
+  "logs": []
+}

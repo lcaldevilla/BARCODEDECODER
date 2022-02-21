@@ -1,0 +1,15 @@
+C:\Users\Luis\source\repos\WAREHOUSEREADER\WAREHOUSEREADER\bin\Debug\netstandard2.0\WAREHOUSEREADER.deps.json
+C:\Users\Luis\source\repos\WAREHOUSEREADER\WAREHOUSEREADER\bin\Debug\netstandard2.0\WAREHOUSEREADER.dll
+C:\Users\Luis\source\repos\WAREHOUSEREADER\WAREHOUSEREADER\bin\Debug\netstandard2.0\ref\WAREHOUSEREADER.dll
+C:\Users\Luis\source\repos\WAREHOUSEREADER\WAREHOUSEREADER\bin\Debug\netstandard2.0\WAREHOUSEREADER.pdb
+C:\Users\Luis\source\repos\WAREHOUSEREADER\WAREHOUSEREADER\obj\Debug\netstandard2.0\WAREHOUSEREADER.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luis\source\repos\WAREHOUSEREADER\WAREHOUSEREADER\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Luis\source\repos\WAREHOUSEREADER\WAREHOUSEREADER\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Luis\source\repos\WAREHOUSEREADER\WAREHOUSEREADER\obj\Debug\netstandard2.0\WAREHOUSEREADER.AssemblyInfoInputs.cache
+C:\Users\Luis\source\repos\WAREHOUSEREADER\WAREHOUSEREADER\obj\Debug\netstandard2.0\WAREHOUSEREADER.AssemblyInfo.cs
+C:\Users\Luis\source\repos\WAREHOUSEREADER\WAREHOUSEREADER\obj\Debug\netstandard2.0\WAREHOUSEREADER.csproj.CoreCompileInputs.cache
+C:\Users\Luis\source\repos\WAREHOUSEREADER\WAREHOUSEREADER\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Luis\source\repos\WAREHOUSEREADER\WAREHOUSEREADER\obj\Debug\netstandard2.0\WAREHOUSEREADER.dll
+C:\Users\Luis\source\repos\WAREHOUSEREADER\WAREHOUSEREADER\obj\Debug\netstandard2.0\ref\WAREHOUSEREADER.dll
+C:\Users\Luis\source\repos\WAREHOUSEREADER\WAREHOUSEREADER\obj\Debug\netstandard2.0\WAREHOUSEREADER.pdb
+C:\Users\Luis\source\repos\WAREHOUSEREADER\WAREHOUSEREADER\obj\Debug\netstandard2.0\WAREHOUSEREADER.csproj.AssemblyReference.cache
