@@ -5,6 +5,7 @@ public class MonoPackageManager_Resources {
 		"WAREHOUSEREADER.Android.dll",
 		"FastAndroidCamera.dll",
 		"FormsViewGroup.dll",
+		"Newtonsoft.Json.dll",
 		"WAREHOUSEREADER.dll",
 		"Xamarin.Android.Support.Annotations.dll",
 		"Xamarin.Android.Support.Compat.dll",

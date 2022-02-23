@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:types.nmvs.eu:v4.0"
+        targetNamespace="urn:types.nmvs.eu:v4.0" elementFormDefault="qualified"
+        attributeFormDefault="qualified">
+	<include schemaLocation="NMVS_Composite_Types.xsd" />
+	<element name="O5_ResultMixedBulk" type="tns:O5_ResultMixedBulk_Type" />
+
+	<complexType name="O5_ResultMixedBulk_Type">
+		<sequence>
+			<element name="Header" type="tns:HeaderResponse_Type" minOccurs="1" maxOccurs="1" />
+			<element name="Body" type="tns:MixedBulkResponseResultTransactionData_Type" minOccurs="1" maxOccurs="1" />
+		</sequence>
+	</complexType>
+	
+	<complexType name="O5FeedbackDataMixedBulk_Type">
+		<sequence>
+			<element name="TrxItem" minOccurs="0" maxOccurs="100000">
+				<complexType>
+					<sequence>
+						<group ref="tns:O5ResponseBody" minOccurs="1" maxOccurs="1"/>
+						<element name="Transaction" type="tns:ResponseHeaderTransactionData_Type" minOccurs="1" maxOccurs="1" />
+						<element name="SubUserId" type="tns:S35_Normalized_Type" minOccurs="0" maxOccurs="1">
+							<annotation>
+								<documentation>Id of the Sub-User</documentation>
+							</annotation>
+						</element>
+					</sequence>
+					<attribute name="reqType" type="tns:CatalogUseCase_Type" use="required" />
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="MixedBulkResponseResultTransactionData_Type">
+		<sequence>
+			<element name="TrxList" type="tns:O5FeedbackDataMixedBulk_Type" minOccurs="0" maxOccurs="1" />
+			<element name="ReturnCode" type="tns:ReturnCode_Type" minOccurs="1" maxOccurs="1" />
+		</sequence>
+	</complexType>
+</schema>	

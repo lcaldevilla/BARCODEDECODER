@@ -24,39 +24,43 @@
             </Grid.ColumnDefinitions>
 
 
-            <Label Text="Gtin" Grid.Column="0"  Grid.Row="0" FontSize="10"
+            <Label Text="Gtin" Grid.Column="0"  Grid.Row="0" FontSize="20"
                FontAttributes="Bold"
-               HorizontalOptions="Center"></Label>
+               HorizontalOptions="Start"></Label>
 
-            <Label x:Name="lbGtin" Text="19827436348394094893489034" Grid.Column="1"  Grid.Row="0" FontSize="10"
+            <Label x:Name="lbGtin" Text="19827436348394094893489034" Grid.Column="1"  Grid.Row="0" FontSize="20"
                FontAttributes="None"
-               HorizontalOptions="Center"></Label>
+               HorizontalOptions="Start"></Label>
 
-            <Label Text="Lote" Grid.Column="0"  Grid.Row="1" FontSize="10"
+            <Label Text="Lote" Grid.Column="0"  Grid.Row="1" FontSize="20"
                FontAttributes="Bold"
-               HorizontalOptions="Center"></Label>
+               HorizontalOptions="Start"></Label>
 
-            <Label Text="19827436348394094893489034" Grid.Column="1"  Grid.Row="1" FontSize="10"
+            <Label x:Name="lbBatch" Text="19827436348394094893489034" Grid.Column="1"  Grid.Row="1" FontSize="20"
                FontAttributes="None"
-               HorizontalOptions="Center"></Label>
+               HorizontalOptions="Start"></Label>
 
-            <Label Text="Serial" Grid.Column="0"  Grid.Row="2"  FontSize="10"
+            <Label Text="Serial" Grid.Column="0"  Grid.Row="2"  FontSize="20"
                FontAttributes="Bold"
-               HorizontalOptions="Center"></Label>
+               HorizontalOptions="Start"></Label>
 
-            <Label Text="19827436348394094893489034" Grid.Column="1"  Grid.Row="2" FontSize="10"
+            <Label x:Name="lbSerial"  Text="19827436348394094893489034" Grid.Column="1"  Grid.Row="2" FontSize="20"
                FontAttributes="None"
-               HorizontalOptions="Center"></Label>
+               HorizontalOptions="Start"></Label>
 
-            <Label Text="Caducidad" Grid.Column="0"  Grid.Row="3" FontSize="10"
+            <Label Text="Caducidad" Grid.Column="0"  Grid.Row="3" FontSize="20"
                FontAttributes="Bold"
-               HorizontalOptions="Center"></Label>
+               HorizontalOptions="Start"></Label>
 
-            <Label Text="19827436348394094893489034" Grid.Column="1"  Grid.Row="3" FontSize="10"
+            <Label x:Name="lbExpire"  Text="19827436348394094893489034" Grid.Column="1"  Grid.Row="3" FontSize="20"
                FontAttributes="None"
-               HorizontalOptions="Center"></Label>
+               HorizontalOptions="Start"></Label>
 
         </Grid>
+
+        <Label x:Name="lbResponse"  Text="Esperando..."  FontSize="20"
+               FontAttributes="None"
+               HorizontalOptions="Center"></Label>
 
         <Button Clicked="Button_Clicked" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" BackgroundColor="Teal" TextColor="White" FontSize="Medium" Text="Abrir cámara" />
     </StackLayout>

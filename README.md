@@ -1,2 +1,2 @@
 # BARCODEDECODER
- Lector ódigo de barras Xamarin Forms
+ Lector código de barras Xamarin Forms

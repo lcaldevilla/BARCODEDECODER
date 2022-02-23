@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+        name="SupportServices"
+        targetNamespace="urn:services.nmvs.eu:v4.0"
+        xmlns:ns="urn:services.nmvs.eu:v4.0"
+        xmlns:env="urn:wsdltypes.nmvs.eu:v4.0"
+        xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+        xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+        xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl">
+  <wsdl:types>
+
+      <xs:schema xmlns:types="urn:types.nmvs.eu:v4.0" targetNamespace="urn:wsdltypes.nmvs.eu:v4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+          <xs:import namespace="urn:types.nmvs.eu:v4.0" schemaLocation="../../xsd/de/arvato/systems/nmvs/interfaces/ap/v4/types/I10_ChangePwd.xsd"/>
+          <xs:import namespace="urn:types.nmvs.eu:v4.0" schemaLocation="../../xsd/de/arvato/systems/nmvs/interfaces/ap/v4/types/I7_Request.xsd"/>
+          <xs:import namespace="urn:types.nmvs.eu:v4.0"
+                     schemaLocation="../../xsd/de/arvato/systems/nmvs/interfaces/ap/v4/types/I12_ConfirmTermsAndConditions.xsd"/>
+          <xs:import namespace="urn:types.nmvs.eu:v4.0" schemaLocation="../../xsd/de/arvato/systems/nmvs/interfaces/ap/v4/types/O2_Result.xsd"/>
+          <xs:import namespace="urn:types.nmvs.eu:v4.0"
+                     schemaLocation="../../xsd/de/arvato/systems/nmvs/interfaces/ap/v4/types/O11_LoadTermsAndConditions.xsd"/>
+          <xs:import namespace="urn:types.nmvs.eu:v4.0" schemaLocation="../../xsd/de/arvato/systems/nmvs/interfaces/ap/v4/types/O12_LoadDataPrivacyPolicy.xsd"/>
+
+      <xs:element name="SupportPingRequest">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="types:PingRequest" />
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SupportPingResponse">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="types:PingResponse" />
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="G445Request">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="types:I10_ChangePwd_Type" />
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="G445Response">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="types:O2_Bulk_Type" />
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="I7RequestType">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="types:I7_Request_Type" />
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="O11LoadTermsAndConditionsType">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="types:O11_LoadTermsAndConditions_Type" />
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="I12ConfirmTermsAndConditionsType">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="types:I12_ConfirmTermsAndConditions_Type" />
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="O2BulkType">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="types:O2_Bulk_Type" />
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="O12LoadDataPrivacyPolicyType">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="types:O12_LoadDataPrivacyPolicy_Type" />
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  
+  <wsdl:message name="PingRequestMessage">
+    <wsdl:part name="messageParameters" element="env:SupportPingRequest" />
+  </wsdl:message>
+  <wsdl:message name="PingResponseMessage">
+    <wsdl:part name="messageParameters" element="env:SupportPingResponse" />
+  </wsdl:message>
+  <wsdl:message name="G445RequestMessage">
+    <wsdl:part name="messageParameters" element="env:G445Request" />
+  </wsdl:message>
+  <wsdl:message name="G445ResponseMessage">
+    <wsdl:part name="messageParameters" element="env:G445Response" />
+  </wsdl:message>
+  <wsdl:message name="G482RequestMessage">
+    <wsdl:part name="messageParameters" element="env:I7RequestType" />
+  </wsdl:message>
+  <wsdl:message name="G482ResponseMessage">
+    <wsdl:part name="messageParameters" element="env:O11LoadTermsAndConditionsType" />
+  </wsdl:message>
+  <wsdl:message name="G483RequestMessage">
+    <wsdl:part name="messageParameters" element="env:I12ConfirmTermsAndConditionsType" />
+  </wsdl:message>
+  <wsdl:message name="G483ResponseMessage">
+    <wsdl:part name="messageParameters" element="env:O2BulkType" />
+  </wsdl:message>
+  <wsdl:message name="G487RequestMessage">
+    <wsdl:part name="messageParameters" element="env:I7RequestType" />
+  </wsdl:message>
+  <wsdl:message name="G487ResponseMessage">
+    <wsdl:part name="messageParameters" element="env:O12LoadDataPrivacyPolicyType" />
+  </wsdl:message>
+
+  <wsdl:portType name="ISupportServices">
+    <wsdl:operation name="PingSupport">
+      <wsdl:input message="ns:PingRequestMessage" wsaw:Action="ns:PingRequestMessage" />
+      <wsdl:output message="ns:PingResponseMessage" wsaw:Action="ns:PingResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="G445ChangePassword">
+      <wsdl:input message="ns:G445RequestMessage" wsaw:Action="ns:G445RequestMessage" />
+      <wsdl:output message="ns:G445ResponseMessage" wsaw:Action="ns:G445ResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="G482LoadTermsAndConditions">
+      <wsdl:input message="ns:G482RequestMessage" wsaw:Action="ns:G482RequestMessage" />
+      <wsdl:output message="ns:G482ResponseMessage" wsaw:Action="ns:G482ResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="G483ConfirmTermsAndConditions">
+      <wsdl:input message="ns:G483RequestMessage" wsaw:Action="ns:G483RequestMessage" />
+      <wsdl:output message="ns:G483ResponseMessage" wsaw:Action="ns:G483ResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="G487LoadDataPrivacyPolicies">
+      <wsdl:input message="ns:G487RequestMessage" wsaw:Action="ns:G487RequestMessage" />
+      <wsdl:output message="ns:G487ResponseMessage" wsaw:Action="ns:G487ResponseMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+
+  <wsdl:binding name="WSHttpBinding_ISupportServices" type="ns:ISupportServices">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PingSupport">
+      <soap12:operation soapAction="urn:PingSupport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="G445ChangePassword">
+      <soap12:operation soapAction="urn:G445ChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="G482LoadTermsAndConditions">
+      <soap12:operation soapAction="urn:G482LoadTermsAndConditions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="G483ConfirmTermsAndConditions">
+      <soap12:operation soapAction="urn:G483ConfirmTermsAndConditions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="G487LoadDataPrivacyPolicies">
+      <soap12:operation soapAction="urn:G487LoadDataPrivacyPolicies" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>    
+  </wsdl:binding>
+
+  <wsdl:service name="SupportServices">
+    <wsdl:port name="Port_SupportServices" binding="ns:WSHttpBinding_ISupportServices">
+        <soap12:address location="http://localhost:8080/WS_SUPPORT_V1/SupportServiceV40"/>
+    </wsdl:port>
+  </wsdl:service>
+
+</wsdl:definitions>

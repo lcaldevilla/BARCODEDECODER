@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+        name="PkiServices"
+        targetNamespace="urn:services.nmvs.eu:v4.0"
+        xmlns:ns="urn:services.nmvs.eu:v4.0"
+        xmlns:env="urn:wsdltypes.nmvs.eu:v4.0"
+        xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+        xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+        xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl">
+    
+	<wsdl:types>
+        <xs:schema xmlns:types="urn:types.nmvs.eu:v4.0" targetNamespace="urn:wsdltypes.nmvs.eu:v4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:import namespace="urn:types.nmvs.eu:v4.0" schemaLocation="../../xsd/de/arvato/systems/nmvs/interfaces/ap/v4/types/I11_DownloadCert.xsd"/>
+            <xs:import namespace="urn:types.nmvs.eu:v4.0" schemaLocation="../../xsd/de/arvato/systems/nmvs/interfaces/ap/v4/types/O10_DownloadCert.xsd"/>
+			<xs:element name="PkiPingRequest">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="types:PingRequest" />
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="PkiPingResponse">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="types:PingResponse" />
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="G615Request">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="types:I11_DownloadCert_Type" />
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="G615Response">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="types:O10_DownloadCert_Type" />
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</wsdl:types>
+    
+	<wsdl:message name="PingRequestMessage">
+		<wsdl:part name="messageParameters" element="env:PkiPingRequest" />
+	</wsdl:message>
+	<wsdl:message name="PingResponseMessage">
+		<wsdl:part name="messageParameters" element="env:PkiPingResponse" />
+	</wsdl:message>
+	<wsdl:message name="G615RequestMessage">
+		<wsdl:part name="messageParameters" element="env:G615Request" />
+	</wsdl:message>
+	<wsdl:message name="G615ResponseMessage">
+		<wsdl:part name="messageParameters" element="env:G615Response" />
+	</wsdl:message>
+    
+	<wsdl:portType name="IPkiServices">
+		<wsdl:operation name="PingPki">
+			<wsdl:input message="ns:PingRequestMessage" wsaw:Action="ns:PingRequestMessage" />
+			<wsdl:output message="ns:PingResponseMessage" wsaw:Action="ns:PingResponseMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="G615DownloadClientCertificate">
+			<wsdl:input message="ns:G615RequestMessage" wsaw:Action="ns:G615RequestMessage" />
+			<wsdl:output message="ns:G615ResponseMessage" wsaw:Action="ns:G615ResponseMessage" />
+		</wsdl:operation>
+	</wsdl:portType>
+    
+	<wsdl:binding name="WSHttpBinding_IPkiServices" type="ns:IPkiServices">
+		<soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="PingPki">
+			<soap12:operation soapAction="urn:PingPki" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="G615DownloadClientCertificate">
+			<soap12:operation soapAction="urn:G615DownloadClientCertificate" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="PkiServices">
+		<wsdl:port name="Port_PkiServices" binding="ns:WSHttpBinding_IPkiServices">
+            <soap12:address location="http://localhost:8080/WS_PKI_V1/PkiServiceV40"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

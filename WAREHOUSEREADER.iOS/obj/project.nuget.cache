@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "6mrVDKFfNanRqyvfxrr00n4w43vLmHULBMb1CrQtB/XO/IIemeA7FMgD7fzhceTfe8RcP4DvC8ylnAJy++PXHg==",
+  "dgSpecHash": "FX+tkYEJXNEC81H7saxXga+RYHXaL0OAJVw1JLfcGhcnobPR1DycfXjCHRJ0ALdfMUDw+dlSqbEYmlJ4Ljd+dw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\WAREHOUSEREADER.iOS\\WAREHOUSEREADER.iOS.csproj",
+  "projectFilePath": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\BARCODEDECODER\\WAREHOUSEREADER.iOS\\WAREHOUSEREADER.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Luis\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Luis\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Luis\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Luis\\.nuget\\packages\\xamarin.essentials\\1.7.1\\xamarin.essentials.1.7.1.nupkg.sha512",
     "C:\\Users\\Luis\\.nuget\\packages\\xamarin.forms\\5.0.0.2337\\xamarin.forms.5.0.0.2337.nupkg.sha512",

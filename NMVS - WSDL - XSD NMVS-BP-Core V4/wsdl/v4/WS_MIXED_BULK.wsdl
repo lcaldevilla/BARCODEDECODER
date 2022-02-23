@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+		name="MixedBulkSyncServices"
+		targetNamespace="urn:services.nmvs.eu:v4.0"
+		xmlns:ns="urn:services.nmvs.eu:v4.0"
+		xmlns:env="urn:wsdltypes.nmvs.eu:v4.0"
+		xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+		xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl">
+    
+	<wsdl:types>
+		<xs:schema xmlns:types="urn:types.nmvs.eu:v4.0" targetNamespace="urn:wsdltypes.nmvs.eu:v4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:import namespace="urn:types.nmvs.eu:v4.0" schemaLocation="../../xsd/de/arvato/systems/nmvs/interfaces/ap/v4/types/I6_Result.xsd"/>
+			<xs:import namespace="urn:types.nmvs.eu:v4.0" schemaLocation="../../xsd/de/arvato/systems/nmvs/interfaces/ap/v4/types/I8_MixedBulk.xsd"/>
+			<xs:import namespace="urn:types.nmvs.eu:v4.0" schemaLocation="../../xsd/de/arvato/systems/nmvs/interfaces/ap/v4/types/O2_Result.xsd"/>
+			<xs:import namespace="urn:types.nmvs.eu:v4.0" schemaLocation="../../xsd/de/arvato/systems/nmvs/interfaces/ap/v4/types/O5_ResultMixedBulk.xsd"/>
+			                        
+			<xs:element name="MixedBulkPingRequest">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="types:PingRequest" />
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="MixedBulkPingResponse">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="types:PingResponse" />
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="G196Request">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="types:I6_Result_Type" />
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="G195Request">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="types:I8_MixedBulk_Type" />
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="G195Response">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="types:O2_Bulk_Type" />
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="G196Response">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="types:O5_ResultMixedBulk_Type" />
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</wsdl:types>
+    
+	<wsdl:message name="PingRequestMessage">
+		<wsdl:part name="messageParameters" element="env:MixedBulkPingRequest" />
+	</wsdl:message>
+	<wsdl:message name="PingResponseMessage">
+		<wsdl:part name="messageParameters" element="env:MixedBulkPingResponse" />
+	</wsdl:message>
+	<wsdl:message name="G196RequestMessage">
+		<wsdl:part name="messageParameters" element="env:G196Request" />
+	</wsdl:message>
+	<wsdl:message name="G195RequestMessage">
+		<wsdl:part name="messageParameters" element="env:G195Request" />
+	</wsdl:message>
+	<wsdl:message name="G195ResponseMessage">
+		<wsdl:part name="messageParameters" element="env:G195Response" />
+	</wsdl:message>
+	<wsdl:message name="G196ResponseMessage">
+		<wsdl:part name="messageParameters" element="env:G196Response" />
+	</wsdl:message>
+	<wsdl:portType name="IMixedBulkServices">
+		<wsdl:operation name="PingMixedBulk">
+			<wsdl:input message="ns:PingRequestMessage" wsaw:Action="ns:PingRequestMessage" />
+			<wsdl:output message="ns:PingResponseMessage" wsaw:Action="ns:PingResponseMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="G195SubmitBulkTransaction">
+			<wsdl:input message="ns:G195RequestMessage" wsaw:Action="ns:G195RequestMessage" />
+			<wsdl:output message="ns:G195ResponseMessage" wsaw:Action="ns:G195ResponseMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="G196RequestBulkTransactionResult">
+			<wsdl:input message="ns:G196RequestMessage" wsaw:Action="ns:G196RequestMessage" />
+			<wsdl:output message="ns:G196ResponseMessage" wsaw:Action="ns:G196ResponseMessage" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="WSHttpBinding_IMixedBulkServices" type="ns:IMixedBulkServices">
+		<soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="PingMixedBulk">
+			<soap12:operation soapAction="urn:PingMixedBulk" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="G195SubmitBulkTransaction">
+			<soap12:operation soapAction="urn:G195SubmitBulkTransaction" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="G196RequestBulkTransactionResult">
+			<soap12:operation soapAction="urn:G196RequestBulkTransactionResult" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="MixedBulkServices">
+		<wsdl:port name="Port_MixedBulkServices" binding="ns:WSHttpBinding_IMixedBulkServices">
+			<soap12:address location="http://localhost:8080/WS_MIXED_BULK_TRANSACTIONS_V1/MixedBulkServiceV40"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

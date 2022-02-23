@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\WAREHOUSEREADER.iOS\\WAREHOUSEREADER.iOS.csproj": {}
+    "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\BARCODEDECODER\\WAREHOUSEREADER.iOS\\WAREHOUSEREADER.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\WAREHOUSEREADER.iOS\\WAREHOUSEREADER.iOS.csproj": {
+    "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\BARCODEDECODER\\WAREHOUSEREADER.iOS\\WAREHOUSEREADER.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\WAREHOUSEREADER.iOS\\WAREHOUSEREADER.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\BARCODEDECODER\\WAREHOUSEREADER.iOS\\WAREHOUSEREADER.iOS.csproj",
         "projectName": "WAREHOUSEREADER.iOS",
-        "projectPath": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\WAREHOUSEREADER.iOS\\WAREHOUSEREADER.iOS.csproj",
+        "projectPath": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\BARCODEDECODER\\WAREHOUSEREADER.iOS\\WAREHOUSEREADER.iOS.csproj",
         "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\WAREHOUSEREADER.iOS\\obj\\",
+        "outputPath": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\BARCODEDECODER\\WAREHOUSEREADER.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\WAREHOUSEREADER\\WAREHOUSEREADER.csproj": {
-                "projectPath": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\WAREHOUSEREADER\\WAREHOUSEREADER.csproj"
+              "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\BARCODEDECODER\\WAREHOUSEREADER\\WAREHOUSEREADER.csproj": {
+                "projectPath": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\BARCODEDECODER\\WAREHOUSEREADER\\WAREHOUSEREADER.csproj"
               }
             }
           }
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\WAREHOUSEREADER\\WAREHOUSEREADER.csproj": {
+    "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\BARCODEDECODER\\WAREHOUSEREADER\\WAREHOUSEREADER.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\WAREHOUSEREADER\\WAREHOUSEREADER.csproj",
+        "projectUniqueName": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\BARCODEDECODER\\WAREHOUSEREADER\\WAREHOUSEREADER.csproj",
         "projectName": "WAREHOUSEREADER",
-        "projectPath": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\WAREHOUSEREADER\\WAREHOUSEREADER.csproj",
+        "projectPath": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\BARCODEDECODER\\WAREHOUSEREADER\\WAREHOUSEREADER.csproj",
         "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\WAREHOUSEREADER\\obj\\",
+        "outputPath": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\BARCODEDECODER\\WAREHOUSEREADER\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -118,6 +118,14 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.Collections": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

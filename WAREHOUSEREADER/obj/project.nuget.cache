@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "UbH3DwOy5FAufc/42X45g+QnkiZTsUU5OofLPBsymGRK4uXUMiIKBteHQBBJE+U+niHGfQLb0IEmUfYkba/QDA==",
+  "dgSpecHash": "F6qIL8QaU/5xQid+Co9YCEpA1rbg9wKSuU6EsjllHqqW+HHFyT9NqLthoJRNMrUsq/5fn627YHkro5jtSdUvzw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\WAREHOUSEREADER\\WAREHOUSEREADER.csproj",
+  "projectFilePath": "C:\\Users\\Luis\\source\\repos\\WAREHOUSEREADER\\BARCODEDECODER\\WAREHOUSEREADER\\WAREHOUSEREADER.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Luis\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Luis\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Luis\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Luis\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Luis\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Luis\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Luis\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\Luis\\.nuget\\packages\\xamarin.essentials\\1.7.1\\xamarin.essentials.1.7.1.nupkg.sha512",
     "C:\\Users\\Luis\\.nuget\\packages\\xamarin.forms\\5.0.0.2337\\xamarin.forms.5.0.0.2337.nupkg.sha512",
     "C:\\Users\\Luis\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
